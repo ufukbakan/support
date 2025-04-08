@@ -9,7 +9,7 @@ export default function Home(req: PageRequest) {
             <h1>Ufuk Bakan</h1>
             <p>{req.dictionary["support-desc"]}</p>
             <h2>{req.dictionary["binance-pay"]}</h2>
-            <img src="/binanceQR-q100.png" alt="binance pay qr" height="200" />
+            <img src="/support/binanceQR-q100.png" alt="binance pay qr" height="200" />
         </>
     )
 }
