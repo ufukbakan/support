@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "jsxFactory": "JJSX.jsxFactory",
+    "jsxFragmentFactory": "JJSX.fragmentFactory",
+    "types": ["jjsx", "node"],
+    // "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "module": "CommonJS",
+    // "moduleResolution": ""
+    "target": "ESNext"
+  }
+}

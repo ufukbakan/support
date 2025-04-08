@@ -1,0 +1,24 @@
+{
+  "name": "support-ufuk-bakan",
+  "version": "1.0.0",
+  "description": "Personal support page",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsx build.ts",
+    "dev": "cross-env NODE_ENV=dev tsx watch --include \"./**/*\" --exclude ./node_modules --exclude ./dist build.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/html-minifier-terser": "^7.0.2",
+    "@types/node": "^22.14.0",
+    "html-minifier-terser": "^7.2.0",
+    "jjsx": "^1.2.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3"
+  }
+}
