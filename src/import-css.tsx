@@ -20,5 +20,5 @@ export default function importCss(path : string) {
         writeFileSync(writePath, minified);
     }
     );
-    return <link href={resolve('/', path)} rel="stylesheet" type="text/css" />
+    return <link href={resolve('/support', path)} rel="stylesheet" type="text/css" />
 }
