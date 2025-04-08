@@ -20,6 +20,9 @@ jobs:
         with:
           node-version: '18'
 
+      - name: Convert lock file
+        run: npx pnpm-lock-to-npm-lock ./pnpm-lock.yaml
+
       - name: Install dependencies
         run: npm ci
 
