@@ -59,8 +59,12 @@ function server() {
 
   const PORT = 3000;
   const PUBLIC_DIR = path.join(__dirname, 'dist');
+  const SUBPATH = '/support';
 
   http.createServer((req, res) => {
+    if (req.url.startsWith(SUBPATH)) {
+      req.url = req.url.replace(SUBPATH, '');
+    }
     let filePath = path.join(PUBLIC_DIR, req.url === '/' ? 'index.html' : req.url);
     const ext = path.extname(filePath).toLowerCase() || '.html';
     if(ext === '.html' && !filePath.endsWith('html')){
