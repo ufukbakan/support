@@ -1,6 +1,6 @@
 {
   "name": "support-ufuk-bakan",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Personal support page",
   "main": "index.js",
   "scripts": {
