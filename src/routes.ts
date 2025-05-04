@@ -12,7 +12,7 @@ export interface PageRequest {
 export type Handler = (r: PageRequest) => JSX.Renderable<JSX.ElementProps>;
 
 function render({ layout, component } = { layout: _layout, component: Home }){
-    return req => _layout(component.meta)({ children: component(req) });
+    return (req: PageRequest) => layout({ meta: component.meta, req })({ children: component(req) });
 }
 
 const routes: Record<string, Handler> = {
