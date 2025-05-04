@@ -1,8 +1,9 @@
 <script>
     const base = '/support';
-    const supportedLangs = ['en', 'tr'];
+    const supportedLangs = ["en", "tr", "es", "es-MX", "fr", "fr-CA", "de", "it", "pt", "pt-BR", "ru", "zh", "zh-TW", "ja", "ar", "hi", "ko", "nl", "he", "fa"];
     const fallbackLang = 'en';
-    const [clientLang] = (navigator.language || fallbackLang).split('-');
-    window.location.href = `${base}/${clientLang}`;
+    const [navigatorLang] = navigator.language.split('-');
+    const lang = supportedLangs.includes(navigatorLang) ? navigatorLang : fallbackLang;
+    window.location.href = `${base}/${lang}`;
 </script>
 Redirecting...
