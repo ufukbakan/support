@@ -1,7 +1,17 @@
-export default function (meta: Array<JSX.Element<JSX.ElementProps>>) {
+import { rtlLanguages } from "../dictionary";
+import { PageRequest } from "../routes"
+
+interface props {
+    meta: Array<JSX.Element<JSX.ElementProps>>,
+    req: PageRequest
+}
+
+export default function ({ meta, req }: props) {
+    const { lang } = req;
+    const isRTL = rtlLanguages.includes(lang);
     return (props: JSX.ElementProps) =>
     (
-        <html>
+        <html lang={lang} dir={isRTL ? "rtl" : "ltr"}>
             <head>
                 <meta charset='utf-8' />
                 <meta http-equiv='X-UA-Compatible' content='IE=edge' />
