@@ -1,9 +1,3 @@
-<script>
-    const base = '/support';
-    const supportedLangs = ["en", "tr", "es", "es-MX", "fr", "fr-CA", "de", "it", "pt", "pt-BR", "ru", "zh", "zh-TW", "ja", "ar", "hi", "ko", "nl", "he", "fa"];
-    const fallbackLang = 'en';
-    const [navigatorLang] = navigator.language.split('-');
-    const lang = supportedLangs.includes(navigatorLang) ? navigatorLang : fallbackLang;
-    window.location.href = `${base}/${lang}`;
-</script>
+<script src="/support/lang-detect.js"></script>
+<script>window.location.href = `${__base__}/${__lang__}`;</script>
 Redirecting...
