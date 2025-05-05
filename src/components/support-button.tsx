@@ -4,7 +4,7 @@ const css = importCss('./support-button.css');
 
 export default function SupportButton(req: PageRequest) {
     return (
-        <>
+        <div id="root">
             <a href="/" target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate"
                     viewBox="295.5 69.26 71 59.48">
@@ -33,7 +33,7 @@ export default function SupportButton(req: PageRequest) {
                 </svg>
                 {req.dictionary["support-me"]}
             </a>
-        </>
+        </div>
     )
 }
 

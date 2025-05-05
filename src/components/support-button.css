@@ -1,3 +1,7 @@
+#root {
+    display: flex;
+    justify-content: center;
+}
 a {
     display: inline block;
     font-family: system-ui, sans-serif;
